@@ -1,5 +1,26 @@
 import { S3Client, GetObjectCommand } from "@aws-sdk/client-s3";
-const config = require("../config.json");
+
+const {
+  REACT_APP_ACCESS_KEY_ID = "",
+  REACT_APP_SECRET_ACCESS_KEY = "",
+  REACT_APP_REGION = "",
+  REACT_APP_BUCKET = "",
+  REACT_APP_S3_KEY = "",
+} = process.env;
+
+const clientSecrets = {
+  credentials: {
+    accessKeyId: REACT_APP_ACCESS_KEY_ID,
+    secretAccessKey: REACT_APP_SECRET_ACCESS_KEY,
+  },
+  region: REACT_APP_REGION,
+};
+
+const paramsSecrets = {
+  region: REACT_APP_REGION,
+  Bucket: REACT_APP_BUCKET,
+  Key: REACT_APP_S3_KEY,
+};
 
 export const createAudio = async (url: string) => {
   const response = await fetch(`/audio`, {
@@ -9,10 +30,6 @@ export const createAudio = async (url: string) => {
       "Content-Type": "application/json",
     },
   });
-
-  // if (!response.ok) {
-  //   throw new Error("Bad URL");
-  // }
 
   const buffer = await response.arrayBuffer();
   const context = new window.AudioContext();
@@ -43,8 +60,8 @@ export const createAudio = async (url: string) => {
 };
 
 export const fetchDefaultSong = async () => {
-  const client = new S3Client(config.client);
-  const res = await client.send(new GetObjectCommand(config.params));
+  const client = new S3Client(clientSecrets);
+  const res = await client.send(new GetObjectCommand(paramsSecrets));
 
   const stringified: { url: string } = await new Response(
     res.Body as BodyInit,

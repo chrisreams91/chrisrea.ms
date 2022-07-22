@@ -8,6 +8,8 @@ https://opengameart.org/content/interstellar-skybox
 
 ### TODO
 
+- audio wont play unless user interacts with browser before it finishes loading
+
 - smoother loading
 
 - stream data so dont wait so damn long

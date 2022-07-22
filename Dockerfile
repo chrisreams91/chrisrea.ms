@@ -11,6 +11,8 @@ RUN npm install
 
 EXPOSE 3000
 
-RUN npm run build:app
+RUN npm run build
+RUN npm run compile
 
-CMD ["npx", "nodemon", "server.ts"]
+
+CMD ["node", "server.js"]

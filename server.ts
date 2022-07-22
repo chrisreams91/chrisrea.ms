@@ -25,3 +25,4 @@ app.post("/audio", async (req, res) => {
 });
 
 app.listen(process.env.PORT || 3001);
+console.log("App listening on : ", process.env.PORT || 3001);

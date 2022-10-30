@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Tab, Tabs, Header, Nav, Anchor } from "grommet";
 import { Github, Linkedin, Mail } from "grommet-icons";
 

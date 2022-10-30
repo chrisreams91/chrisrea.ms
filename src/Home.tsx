@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Grommet } from "grommet";
 import { grommet } from "grommet/themes";
 import Bio from "./Bio";

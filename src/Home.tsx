@@ -5,7 +5,7 @@ import Bio from "./Bio";
 import Projects from "./Projects";
 import Navbar from "./Navbar";
 
-const App = () => {
+const Home = () => {
   const [activeTabIndex, setActiveTabIndex] = useState(1);
 
   const tabs = [
@@ -25,4 +25,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;

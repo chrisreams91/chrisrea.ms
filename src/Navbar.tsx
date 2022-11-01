@@ -1,28 +1,5 @@
 import { Box, Tab, Tabs, Header, Nav, Anchor } from "grommet";
-import { Github, Linkedin, Mail } from "grommet-icons";
-
-const ContactIcons = () => (
-  <Box direction="row" gap="xxsmall" justify="center">
-    <Anchor
-      target="_blank"
-      a11yTitle="Follow us on Twitter"
-      href="https://github.com/chrisreams91"
-      icon={<Mail color="brand" size="medium" />}
-    />
-    <Anchor
-      target="_blank"
-      a11yTitle="Share feedback on Github"
-      href="https://github.com/chrisreams91"
-      icon={<Github color="brand" size="medium" />}
-    />
-    <Anchor
-      target="_blank"
-      a11yTitle="Chat with us on Slack"
-      href="https://www.linkedin.com/in/chris-reams-044160144/"
-      icon={<Linkedin color="brand" size="medium" />}
-    />
-  </Box>
-);
+import ContactIconGroup from "./ContactIconGroup";
 
 interface Props {
   tabs: { component: JSX.Element; title: string }[];
@@ -45,7 +22,7 @@ const Navbar = ({ tabs, onTabPress, activeTabIndex }: Props) => {
         </Tabs>
       </Box>
       <Nav direction="row">
-        <ContactIcons />
+        <ContactIconGroup />
       </Nav>
     </Header>
   );

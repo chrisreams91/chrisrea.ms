@@ -1,5 +1,3 @@
-import React from "react";
-// import { useNavigate } from "react-router-dom";
 import {
   // Box,
   Card,
@@ -10,49 +8,64 @@ import {
   Image,
   Text,
   Anchor,
+  Spinner,
 } from "grommet";
 import { Code } from "grommet-icons";
+import mainLogo from "./3dviz.jpg";
+import styled from "styled-components";
 
 const projects = [
   {
     title: "3D Audio Visualizer",
     message: "An audio spectrum visualizer in a 3D space",
-    repository: "https://github.com/chrisreams91/chrisrea.ms",
+    repository: "https://github.com/chrisreams91",
     route: "/Visualizer",
   },
   {
     title: "3D Audio Visualizer",
     message: "Past 24hrs",
-    repository: "bar",
-    route: "Visualizer",
+    repository: "https://github.com/chrisreams91",
+    route: "https://github.com/chrisreams91",
   },
   {
     title: "3D Audio Visualizer",
     message: "Past 24hrs",
-    repository: "bar",
-    route: "Visualizer",
+    repository: "https://github.com/chrisreams91",
+    route: "https://github.com/chrisreams91",
   },
 ];
 
+const StyledAnchor = styled(Anchor)`
+  &:hover {
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+    heght: 32px;
+  }
+`;
+
 const Projects = () => {
-  // const navigate = useNavigate();
   return (
     <Grid gap="medium" columns={{ count: "fit", size: "small" }}>
-      {projects.map((value) => (
-        // <Card key={value.title} onClick={() => navigate(value.route)}>
-        <Card key={value.title} onClick={() => null}>
-          <CardBody>
-            <Image
-              fill
-              src="//v2.grommet.io/assets/IMG_4245.jpg"
-              fit="contain"
-            />
+      {projects.map((value, index) => (
+        <Card
+          key={index}
+          onClick={() => {}}
+          hoverIndicator={{ elevation: "large" }}
+          focusIndicator={false}
+        >
+          <CardBody
+            onClick={() => window.open(value.route)}
+            focusIndicator={false}
+          >
+            <Image fill src={mainLogo} fit="contain" />
           </CardBody>
-          <CardFooter pad={{ horizontal: "small" }}>
-            <Text size="xsmall">{value.message}</Text>
-            <Anchor
+          <CardFooter pad={{ horizontal: "small" }} height="xsmall">
+            <Text size="small">{value.message}</Text>
+            <StyledAnchor
               target="_blank"
-              a11yTitle="Chat with us on Slack"
+              a11yTitle="Link to code"
               href={value.repository}
               icon={<Code color="brand" size="medium" />}
             />

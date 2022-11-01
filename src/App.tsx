@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Grommet } from "grommet";
-import { grommet } from "grommet/themes";
+import { grommet, ThemeType } from "grommet/themes";
 import Bio from "./Bio";
 import Projects from "./Projects";
 import Navbar from "./Navbar";
@@ -13,8 +13,25 @@ const App = () => {
     { component: <Projects />, title: "Projects" },
   ];
 
+  const theme: ThemeType = {
+    global: {
+      focus: {
+        shadow: undefined,
+      },
+    },
+    anchor: {
+      fontWeight: 600,
+      hover: {
+        extend: () => `height: '100px'`,
+      },
+    },
+    icon: {
+      extend: () => `height: '100px'`,
+    },
+  };
+
   return (
-    <Grommet theme={grommet}>
+    <Grommet theme={theme}>
       <Navbar
         tabs={tabs}
         activeTabIndex={activeTabIndex}

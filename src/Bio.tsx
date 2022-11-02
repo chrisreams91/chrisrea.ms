@@ -1,11 +1,11 @@
 import {
-  Box,
-  Button,
+  // Box,
+  // Button,
   Page,
   PageHeader,
   PageContent,
-  Text,
-  Paragraph,
+  // Text,
+  // Paragraph,
 } from "grommet";
 
 const Bio = () => (

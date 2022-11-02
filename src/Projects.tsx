@@ -8,7 +8,7 @@ import {
   Image,
   Text,
   Anchor,
-  Spinner,
+  // Spinner,
 } from "grommet";
 import { Code } from "grommet-icons";
 import mainLogo from "./3dviz.jpg";

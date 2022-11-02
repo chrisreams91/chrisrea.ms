@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Grommet } from "grommet";
-import { grommet, ThemeType } from "grommet/themes";
+import { ThemeType } from "grommet/themes";
 import Bio from "./Bio";
 import Projects from "./Projects";
 import Navbar from "./Navbar";
 
 const App = () => {
-  const [activeTabIndex, setActiveTabIndex] = useState(1);
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
 
   const tabs = [
     { component: <Bio />, title: "Home" },

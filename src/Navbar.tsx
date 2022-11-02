@@ -1,4 +1,4 @@
-import { Box, Tab, Tabs, Header, Nav, Anchor } from "grommet";
+import { Box, Tab, Tabs, Header, Nav } from "grommet";
 import ContactIconGroup from "./ContactIconGroup";
 
 interface Props {

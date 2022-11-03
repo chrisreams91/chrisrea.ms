@@ -51,7 +51,7 @@ const ProjectCard = ({ title, repository, image, icons, route }: Props) => (
       </Text>
       <Box direction="row">
         {icons.map((Icon) => (
-          <Box pad={"xxsmall"}>
+          <Box pad={"xxsmall"} justify={"center"}>
             <Icon size={Icon === SiGo ? 40 : 30} color={"#6600cc"} />
           </Box>
         ))}

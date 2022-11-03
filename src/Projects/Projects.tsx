@@ -11,6 +11,7 @@ import {
   SiRaspberrypi,
   SiRust,
 } from "react-icons/si";
+import { HiOutlineCommandLine } from "react-icons/hi2";
 
 const projects = [
   {
@@ -31,14 +32,14 @@ const projects = [
     title: "Audio Player and Visualizer CLI",
     repository: "https://github.com/chrisreams91/audio-player-cli",
     image: "https://picsum.photos/900/450",
-    icons: [SiGo],
+    icons: [SiGo, HiOutlineCommandLine],
     route: undefined,
   },
   {
     title: "Developer Dashboard CLI",
     repository: "https://github.com/chrisreams91/terminalDashboard",
     image: "https://picsum.photos/900/450",
-    icons: [SiRust],
+    icons: [SiRust, HiOutlineCommandLine],
     route: undefined,
   },
   {

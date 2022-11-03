@@ -9,9 +9,13 @@ import {
 } from "grommet";
 
 const Bio = () => (
-  <Page kind="narrow">
-    <PageHeader title="Chris Reams" subtitle="zzz" />
-    <PageContent>temp</PageContent>
+  <Page kind="narrow" align="center">
+    <PageHeader title="Chris Reams" align="center" />
+    <PageContent align="center">
+      {" "}
+      temp temptem ptempt emptemp temp temptem ptempt emptemp temp temptem
+      ptempt emptemp
+    </PageContent>
   </Page>
 );
 

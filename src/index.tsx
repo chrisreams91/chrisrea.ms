@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import NotFound from "./404";
+import Error from "./Error/Error";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -12,8 +12,8 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<App />} errorElement={<Error />} />
+        <Route path="*" element={<Error notFound />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

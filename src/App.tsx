@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Grommet } from "grommet";
 import { ThemeType } from "grommet/themes";
-import Bio from "./Bio";
-import Projects from "./Projects";
-import Navbar from "./Navbar";
+import Bio from "./Bio/Bio";
+import Projects from "./Projects/Projects";
+import Navbar from "./Navbar/Navbar";
 
 const App = () => {
-  const [activeTabIndex, setActiveTabIndex] = useState(0);
+  const [activeTabIndex, setActiveTabIndex] = useState(1);
+  const [darkMode, setDarkMode] = useState(true);
 
   const tabs = [
     { component: <Bio />, title: "Home" },
@@ -36,6 +37,8 @@ const App = () => {
         tabs={tabs}
         activeTabIndex={activeTabIndex}
         onTabPress={setActiveTabIndex}
+        darkMode={darkMode}
+        onPressMode={setDarkMode}
       />
       {tabs[activeTabIndex].component}
     </Grommet>

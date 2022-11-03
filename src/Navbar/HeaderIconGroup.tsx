@@ -1,8 +1,28 @@
 import { Box, Anchor } from "grommet";
-import { Github, Linkedin, Mail } from "grommet-icons";
+import { Github, Linkedin, Mail, Sun, Moon } from "grommet-icons";
 
-const ContactIconGroup = () => (
+interface Props {
+  darkMode: boolean;
+  onPressMode: any;
+}
+
+const HeaderIconGroup = ({ darkMode, onPressMode }: Props) => (
   <Box direction="row" gap="xxsmall" justify="center">
+    {darkMode ? (
+      <Anchor
+        target="_blank"
+        onClick={() => onPressMode(!darkMode)}
+        a11yTitle="Mode"
+        icon={<Sun color="brand" size="medium" />}
+      />
+    ) : (
+      <Anchor
+        target="_blank"
+        onClick={() => onPressMode(!darkMode)}
+        a11yTitle="Mode"
+        icon={<Moon color="brand" size="medium" />}
+      />
+    )}
     <Anchor
       target="_blank"
       a11yTitle="Email"
@@ -24,4 +44,4 @@ const ContactIconGroup = () => (
   </Box>
 );
 
-export default ContactIconGroup;
+export default HeaderIconGroup;

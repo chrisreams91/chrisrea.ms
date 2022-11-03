@@ -1,13 +1,21 @@
 import { Box, Tab, Tabs, Header, Nav } from "grommet";
-import ContactIconGroup from "./ContactIconGroup";
+import HeaderIconGroup from "./HeaderIconGroup";
 
 interface Props {
   tabs: { component: JSX.Element; title: string }[];
   activeTabIndex: number;
   onTabPress: (index: number) => void;
+  darkMode: boolean;
+  onPressMode: any;
 }
 
-const Navbar = ({ tabs, onTabPress, activeTabIndex }: Props) => {
+const Navbar = ({
+  tabs,
+  onTabPress,
+  activeTabIndex,
+  darkMode,
+  onPressMode,
+}: Props) => {
   return (
     <Header hoverIndicator={true}>
       <Box direction="row" align="center" gap="small" justify="between">
@@ -22,7 +30,7 @@ const Navbar = ({ tabs, onTabPress, activeTabIndex }: Props) => {
         </Tabs>
       </Box>
       <Nav direction="row">
-        <ContactIconGroup />
+        <HeaderIconGroup darkMode={darkMode} onPressMode={onPressMode} />
       </Nav>
     </Header>
   );

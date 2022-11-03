@@ -14,7 +14,7 @@ const App = () => {
     { component: <Projects />, title: "Projects" },
   ];
 
-  const theme: ThemeType = {
+  const LightTheme: ThemeType = {
     global: {
       focus: {
         shadow: undefined,
@@ -31,8 +31,10 @@ const App = () => {
     },
   };
 
+  // const DarkTheme: ThemeType = {};
+
   return (
-    <Grommet theme={theme}>
+    <Grommet theme={darkMode ? LightTheme : LightTheme}>
       <Navbar
         tabs={tabs}
         activeTabIndex={activeTabIndex}

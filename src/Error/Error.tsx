@@ -5,6 +5,7 @@ interface Props {
   notFound?: boolean;
 }
 
+// Find generic error page for non 404
 const NotFound = ({ notFound }: Props) => (
   <div style={{ display: "flex", justifyContent: "center" }}>
     <Lottie

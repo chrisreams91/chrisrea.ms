@@ -1,26 +1,15 @@
 import {
-  // Box,
   Card,
   CardBody,
   CardFooter,
   Image,
   Text,
-  // Anchor,
+  ThemeContext,
   Box,
+  ThemeType,
 } from "grommet";
 import { IconType } from "react-icons";
 import { SiGo } from "react-icons/si";
-// import styled from "styled-components";
-
-// const StyledAnchor = styled(Anchor)`
-//   &:hover {
-//     svg {
-//       width: 32px;
-//       height: 32px;
-//     }
-//     heght: 32px;
-//   }
-// `;
 
 interface Props {
   title: string;
@@ -42,26 +31,33 @@ const ProjectCard = ({ title, repository, image, icons, route }: Props) => (
     </CardBody>
     <CardFooter
       pad={{ horizontal: "small" }}
-      color="light"
       justify="between"
       height={{ min: "xxsmall" }}
     >
       <Text size="medium" weight={"normal"}>
         {title}
       </Text>
-      <Box direction="row">
-        {icons.map((Icon) => (
-          <Box pad={"xxsmall"} justify={"center"}>
-            <Icon size={Icon === SiGo ? 40 : 30} color={"#6600cc"} />
-          </Box>
-        ))}
-      </Box>
-      {/* <StyledAnchor
-        target="_blank"
-        a11yTitle="Link to code"
-        href={repository}
-        icon={<Code color="brand" size="medium" />}
-      /> */}
+      <ThemeContext.Consumer>
+        {(theme: ThemeType) => {
+          // @ts-ignore
+          const isDark = theme?.dark;
+          const dark = "#6FFFB0";
+          const light = "#7D4CDB";
+          return (
+            <Box direction="row">
+              {icons.map((Icon, index) => (
+                <Box pad={"xxsmall"} justify={"center"}>
+                  <Icon
+                    key={index}
+                    size={Icon === SiGo ? 40 : 30}
+                    color={isDark ? dark : light}
+                  />
+                </Box>
+              ))}
+            </Box>
+          );
+        }}
+      </ThemeContext.Consumer>
     </CardFooter>
   </Card>
 );

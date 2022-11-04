@@ -24,8 +24,8 @@ const Navbar = ({
           onActive={onTabPress}
           justify="start"
         >
-          {tabs.map((tab) => (
-            <Tab title={tab.title} />
+          {tabs.map((tab, index) => (
+            <Tab key={index} title={tab.title} />
           ))}
         </Tabs>
       </Box>

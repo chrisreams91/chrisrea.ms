@@ -1,4 +1,4 @@
-import { Grid } from "grommet";
+import { Box, Grid } from "grommet";
 // import mainLogo from "./images/3dviz.jpg";
 // import clock from "./images/Clock.jpg";
 import ProjectCard from "./ProjectCard";
@@ -29,7 +29,7 @@ const projects = [
     route: undefined,
   },
   {
-    title: "Audio Player and Visualizer CLI",
+    title: "Audio Visualizer CLI",
     repository: "https://github.com/chrisreams91/audio-player-cli",
     image: "https://picsum.photos/900/450",
     icons: [SiGo, HiOutlineCommandLine],
@@ -60,11 +60,13 @@ const projects = [
 
 const Projects = () => {
   return (
-    <Grid gap="medium" columns={{ count: "fit", size: "medium" }} pad="large">
-      {projects.map((value) => (
-        <ProjectCard {...value} />
-      ))}
-    </Grid>
+    <Box>
+      <Grid gap="medium" columns={{ count: "fit", size: "medium" }} pad="large">
+        {projects.map((value, index) => (
+          <ProjectCard key={index} {...value} />
+        ))}
+      </Grid>
+    </Box>
   );
 };
 export default Projects;

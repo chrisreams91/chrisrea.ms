@@ -11,14 +11,20 @@ const HeaderIconGroup = ({ darkMode, onPressMode }: Props) => (
     {darkMode ? (
       <Anchor
         target="_blank"
-        onClick={() => onPressMode(!darkMode)}
+        onClick={() => {
+          localStorage.setItem("darkMode", `${!darkMode}`);
+          onPressMode(!darkMode);
+        }}
         a11yTitle="Mode"
         icon={<Sun size="medium" />}
       />
     ) : (
       <Anchor
         target="_blank"
-        onClick={() => onPressMode(!darkMode)}
+        onClick={() => {
+          localStorage.setItem("darkMode", `${!darkMode}`);
+          onPressMode(!darkMode);
+        }}
         a11yTitle="Mode"
         icon={<Moon size="medium" />}
       />

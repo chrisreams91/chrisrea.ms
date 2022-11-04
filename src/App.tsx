@@ -6,8 +6,11 @@ import Projects from "./Projects/Projects";
 import Navbar from "./Navbar/Navbar";
 
 const App = () => {
+  const modeSaved = localStorage.getItem("darkMode");
+  const mode = (modeSaved && JSON.parse(modeSaved)) || false;
+
   const [activeTabIndex, setActiveTabIndex] = useState(1);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(mode);
 
   const tabs = [
     { component: <Bio />, title: "Home" },

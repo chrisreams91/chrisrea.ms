@@ -10,8 +10,8 @@ import {
 } from "grommet";
 
 const Bio = () => (
-  <Page kind="narrow" align="center">
-    <PageHeader title="Hey I'm Chris" align="center" />
+  <Page kind="narrow">
+    <PageHeader title="Hey I'm Chris" style={{ textAlign: "center" }} />
     <PageContent align="center" pad={"small"}>
       <Text>
         I'm a developer currently working at{" "}

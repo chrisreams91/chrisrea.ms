@@ -12,7 +12,7 @@ const App = () => {
   const modeSaved = localStorage.getItem("darkMode");
   const mode = (modeSaved && JSON.parse(modeSaved)) || false;
 
-  const [activeTabIndex, setActiveTabIndex] = useState(1);
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [darkMode, setDarkMode] = useState(mode);
 
   const tabs = [

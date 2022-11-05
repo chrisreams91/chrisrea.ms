@@ -10,6 +10,7 @@ import {
 } from "grommet";
 import { IconType } from "react-icons";
 import { SiGo } from "react-icons/si";
+import { getColors } from "../util";
 
 interface Props {
   title: string;
@@ -39,19 +40,12 @@ const ProjectCard = ({ title, repository, image, icons, route }: Props) => (
       </Text>
       <ThemeContext.Consumer>
         {(theme: ThemeType) => {
-          // @ts-ignore
-          const isDark = theme?.dark;
-          const dark = "#6FFFB0";
-          const light = "#7D4CDB";
+          const color = getColors(theme, "anchor");
           return (
             <Box direction="row">
               {icons.map((Icon, index) => (
-                <Box pad={"xxsmall"} justify={"center"}>
-                  <Icon
-                    key={index}
-                    size={Icon === SiGo ? 40 : 30}
-                    color={isDark ? dark : light}
-                  />
+                <Box pad={"xxsmall"} justify={"center"} key={index}>
+                  <Icon size={Icon === SiGo ? 40 : 30} color={color} />
                 </Box>
               ))}
             </Box>

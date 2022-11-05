@@ -4,27 +4,34 @@ import {
   Page,
   PageHeader,
   PageContent,
-  // Text,
+  Anchor,
+  Text,
   // Paragraph,
 } from "grommet";
 
 const Bio = () => (
   <Page kind="narrow" align="center">
-    <PageHeader title="Chris Reams" align="center" />
+    <PageHeader title="Hey I'm Chris" align="center" />
     <PageContent align="center" pad={"small"}>
-      temp temptem ptempt emptemp temp temptem ptempt emptemp temp temptem
-      ptempt emptemp temp temptem ptempt emptemp temp temptem ptempt emptemp
-      temp temptem ptempt emptemp
+      <Text>
+        I'm a developer currently working at{" "}
+        <Anchor
+          href="https://www.bayer.com/en/agriculture"
+          label="Bayer Crop Science"
+          gap="small"
+        />{" "}
+        on geospatial mapping tools.
+      </Text>
     </PageContent>
     <PageContent align="center" pad={"small"}>
-      temp temptem ptempt emptemp temp temptem ptempt emptemp temp temptem
-      ptempt emptemp temp temptem ptempt emptemp temp temptem ptempt emptemp
-      temp temptem ptempt emptemp
-    </PageContent>{" "}
+      <Text>
+        Currently excited by running code in places other than the browser
+      </Text>
+    </PageContent>
     <PageContent align="center" pad={"small"}>
-      temp temptem ptempt emptemp temp temptem ptempt emptemp temp temptem
-      ptempt emptemp temp temptem ptempt emptemp temp temptem ptempt emptemp
-      temp temptem ptempt emptemp
+      <Text>
+        When I am not coding, I love to skateboard, play videogames and travel.
+      </Text>
     </PageContent>
   </Page>
 );

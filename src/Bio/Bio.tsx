@@ -25,13 +25,13 @@ const Bio = () => (
     </PageContent>
     <PageContent align="center" pad={"small"}>
       <Text>
-        Currently excited by processing audio and running code in places other
-        than the browser.
+        I've recently been playing around with processing audio and running code
+        in places other than the browser.
       </Text>
     </PageContent>
     <PageContent align="center" pad={"small"}>
       <Text>
-        When I am not coding, I love to skateboard, play videogames and travel.
+        When I'm not coding, I love to skateboard, play videogames and travel.
       </Text>
     </PageContent>
   </Page>

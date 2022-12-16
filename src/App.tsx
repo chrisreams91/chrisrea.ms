@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { Grommet } from "grommet";
-import {
-  grommet,
-  // dark,
-} from "grommet/themes";
+import { grommet } from "grommet/themes";
 import Bio from "./Bio/Bio";
 import Projects from "./Projects/Projects";
 import Navbar from "./Navbar/Navbar";

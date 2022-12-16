@@ -12,7 +12,6 @@ import {
   SiReact,
   SiGo,
   SiRaspberrypi,
-  // SiRust,
 } from "react-icons/si";
 import { HiOutlineCommandLine } from "react-icons/hi2";
 
@@ -45,20 +44,6 @@ const projects = [
     icons: [SiTypescript, SiReact],
     route: undefined,
   },
-  // {
-  //   title: "Developer Dashboard CLI",
-  //   repository: "https://github.com/chrisreams91/terminalDashboard",
-  //   image: "https://picsum.photos/900/450",
-  //   icons: [SiRust, HiOutlineCommandLine],
-  //   route: undefined,
-  // },
-  // {
-  //   title: "LED Display",
-  //   repository: "https://github.com/chrisreams91/ledTicker",
-  //   image: "https://picsum.photos/900/450",
-  //   icons: [SiRust, SiRaspberrypi],
-  //   route: undefined,
-  // },
 ];
 
 const Projects = () => {

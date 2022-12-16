@@ -1,13 +1,4 @@
-import {
-  // Box,
-  // Button,
-  Page,
-  PageHeader,
-  PageContent,
-  Anchor,
-  Text,
-  // Paragraph,
-} from "grommet";
+import { Page, PageHeader, PageContent, Anchor, Text } from "grommet";
 
 const Bio = () => (
   <Page>

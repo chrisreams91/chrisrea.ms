@@ -1,9 +1,10 @@
 import { Box, Grid } from "grommet";
-import mainLogo from "./images/3dviz.png";
-import clock from "./images/clock.png";
-import cliViz from "./images/cliViz.png";
 import ProjectCard from "./ProjectCard";
-import temp3 from "./images/temp3.png";
+
+import threeDViz from "./images/threeDViz.jpg";
+import clockCompressed from "./images/clockCompressed.jpg";
+import cliViz from "./images/cliViz.png";
+import thisSite from "./images/thisSite.jpg";
 
 import {
   SiPython,
@@ -19,14 +20,14 @@ const projects = [
   {
     title: "3D Audio Visualizer",
     repository: "https://github.com/chrisreams91/3D-AudioVisualizer",
-    image: mainLogo,
+    image: threeDViz,
     icons: [SiTypescript, SiReact, SiThreedotjs],
     route: "/Visualizer",
   },
   {
     title: "3D-Printed Servo Clock",
     repository: "https://github.com/chrisreams91/servo-clock",
-    image: clock,
+    image: clockCompressed,
     icons: [SiPython, SiRaspberrypi],
     route: undefined,
   },
@@ -40,7 +41,7 @@ const projects = [
   {
     title: "This Website",
     repository: "https://github.com/chrisreams91/chrisrea.ms",
-    image: temp3,
+    image: thisSite,
     icons: [SiTypescript, SiReact],
     route: undefined,
   },

@@ -16,8 +16,7 @@ const Bio = () => (
     </PageContent>
     <PageContent align="center" pad={"small"}>
       <Text>
-        I've recently been playing around with processing audio and running code
-        in places other than the browser.
+        I've recently been interested in processing audio and writing code for outside of the web ecosystem.
       </Text>
     </PageContent>
     <PageContent align="center" pad={"small"}>

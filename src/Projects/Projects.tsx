@@ -1,10 +1,5 @@
 import { Box, Grid } from "grommet";
-import mainLogo from "./images/3dviz.png";
-import clock from "./images/clock.png";
-import cliViz from "./images/cliViz.png";
 import ProjectCard from "./ProjectCard";
-import temp3 from "./images/temp3.png";
-
 import {
   SiPython,
   SiTypescript,
@@ -15,38 +10,41 @@ import {
 } from "react-icons/si";
 import { HiOutlineCommandLine } from "react-icons/hi2";
 
-const projects = [
-  {
-    title: "3D Audio Visualizer",
-    repository: "https://github.com/chrisreams91/3D-AudioVisualizer",
-    image: mainLogo,
-    icons: [SiTypescript, SiReact, SiThreedotjs],
-    route: "/Visualizer",
-  },
-  {
-    title: "3D-Printed Servo Clock",
-    repository: "https://github.com/chrisreams91/servo-clock",
-    image: clock,
-    icons: [SiPython, SiRaspberrypi],
-    route: undefined,
-  },
-  {
-    title: "Audio Visualizer CLI",
-    repository: "https://github.com/chrisreams91/audio-player-cli",
-    image: cliViz,
-    icons: [SiGo, HiOutlineCommandLine],
-    route: undefined,
-  },
-  {
-    title: "This Website",
-    repository: "https://github.com/chrisreams91/chrisrea.ms",
-    image: temp3,
-    icons: [SiTypescript, SiReact],
-    route: undefined,
-  },
-];
+interface Props {
+  images: string[]
+}
 
-const Projects = () => {
+const Projects = ({images}: Props) => {
+  const projects = [
+    {
+      title: "3D Audio Visualizer",
+      repository: "https://github.com/chrisreams91/3D-AudioVisualizer",
+      image: images[0],
+      icons: [SiTypescript, SiReact, SiThreedotjs],
+      route: "/Visualizer",
+    },
+    {
+      title: "3D-Printed Servo Clock",
+      repository: "https://github.com/chrisreams91/servo-clock",
+      image: images[1],
+      icons: [SiPython, SiRaspberrypi],
+      route: undefined,
+    },
+    {
+      title: "Audio Visualizer CLI",
+      repository: "https://github.com/chrisreams91/audio-player-cli",
+      image: images[2],
+      icons: [SiGo, HiOutlineCommandLine],
+      route: undefined,
+    },
+    {
+      title: "This Website",
+      repository: "https://github.com/chrisreams91/chrisrea.ms",
+      image: images[3],
+      icons: [SiTypescript, SiReact],
+      route: undefined,
+    },
+  ];
   return (
     <Box>
       <Grid gap="medium" columns={{ count: "fit", size: "medium" }} pad="large">
